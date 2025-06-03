@@ -42,6 +42,8 @@ func main() {
 		code = strings.ReplaceAll(code, ".", WRITE)
 
 		fmt.Print(code)
+
+		os.WriteFile("dist/program.aiscream", []byte(code), 0644)
 	} else {
 		fmt.Println("Usage: parser program.bf")
 	}
