@@ -28,6 +28,7 @@ func main() {
 
 		code := string(bytes)
 
+		// 改行と空白を消す
 		code = strings.ReplaceAll(code, "\n", "")
 		re := regexp.MustCompile(`\s+`)
 		code = re.ReplaceAllString(code, "")
